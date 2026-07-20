@@ -19,9 +19,7 @@ services:
     depends_on:
       - catalogue
       - user
-      - cart
-      - shipping
-      - payment
+
   redis:
     build: ./redis
     image: shajuawsdocker/redis:v1
