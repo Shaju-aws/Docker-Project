@@ -1,0 +1,35 @@
+name: roboshop
+services:
+  mongodb:
+    build: ./MongoDB
+    image: shajuawsdocker/mongodb:v1
+    container_name: mongodb
+  catalogue:
+    build: ./Catalogue
+    image: shajuawsdocker/catalogue:v1
+    container_name: catalogue
+    depends_on:
+      - mongodb
+  Frontend:
+    build: ./Frontend
+    image: shajuawsdocker/frontend:v1
+    container_name: frontend
+    ports:
+      - 80:80
+    depends_on:
+      - catalogue
+      - user
+      - cart
+      - shipping
+      - payment
+  redis:
+  build: ./redis
+  image: shajuawsdocker/redis:v1
+  container_name: redis
+  user:
+    build: ./user
+    image: shajuawsdocker/user:v1
+    container_name: user
+    depends_on:
+      - mongodb
+      - redis
