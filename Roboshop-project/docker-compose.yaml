@@ -49,3 +49,10 @@ services:
     command: --mysql-native-password=ON --innodb-lock_wait_timeout=120
     environment:
       MYSQL_ROOT_PASSWORD: RoboShop@1
+  shipping:
+    build: ./shipping
+    image: shajuawsdocker/shipping:v1
+    container_name: shipping
+    environment:
+      - CART_ENDPOINT=cart:8080
+      - DB_HOST=mysql
