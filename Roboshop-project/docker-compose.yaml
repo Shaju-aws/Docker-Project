@@ -42,3 +42,9 @@ services:
     depends_on:
       - redis
       - catalogue
+  mysql:
+    build: ./mysql
+    image: shajuawsdocker/mysql:v1
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: RoboShop@1
