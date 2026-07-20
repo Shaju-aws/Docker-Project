@@ -23,9 +23,9 @@ services:
       - shipping
       - payment
   redis:
-  build: ./redis
-  image: shajuawsdocker/redis:v1
-  container_name: redis
+    build: ./redis
+    image: shajuawsdocker/redis:v1
+    container_name: redis
   user:
     build: ./user
     image: shajuawsdocker/user:v1
