@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: catalogue
-        image: shajuawsdevops/roboshop-docker:catalogue-v1
+        image: shajuawsdevops/roboshop-docker:catalogue-v2
         envFrom:
         -  configMapRef:
               name: catalogue
