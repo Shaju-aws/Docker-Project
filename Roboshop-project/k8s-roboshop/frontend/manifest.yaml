@@ -95,7 +95,7 @@ spec:
       - name: frontend
         image: shajuawsdevops/roboshop-docker:frontend-v1
         volumeMounts:
-        - name: config
+        - name: nginx-config
           mountPath: "/etc/nginx/nginx.conf"
           subPath: nginx.conf
           readOnly: true
