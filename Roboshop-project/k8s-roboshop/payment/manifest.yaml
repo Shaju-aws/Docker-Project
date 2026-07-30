@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
       - name: payment
-        image: shajuawsdevops/roboshop-docker:payment-v1
+        image: shajuawsdevops/roboshop-docker:payment-v2
         envFrom:
         -  configMapRef:
               name: payment
