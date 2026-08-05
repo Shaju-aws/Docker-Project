@@ -14,3 +14,7 @@ accessConfig:
       type: STANDARD # optional Type
       kubernetesGroups: # optional Kubernetes groups
         - Devops-trainee # groups can used to give permissions via RBAC
+    - principalARN: arn:aws:iam::058264500266:user/DevOps-2
+      type: STANDARD # optional Type
+      kubernetesGroups: # optional Kubernetes groups
+        - DevOps-Leads # groups can used to give permissions via RBAC
