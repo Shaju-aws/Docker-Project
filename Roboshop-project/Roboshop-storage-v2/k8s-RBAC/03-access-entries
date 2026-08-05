@@ -1,0 +1,16 @@
+# An example of cluster config that uses access entries for cluster access management.
+
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: access-entries-cluster
+  region: us-east-1
+
+accessConfig:
+  authenticationMode: API
+  accessEntries:
+    - principalARN: arn:aws:iam::058264500266:user/Devops-1
+      type: STANDARD # optional Type
+      kubernetesGroups: # optional Kubernetes groups
+        - Devops-trainee # groups can used to give permissions via RBAC
